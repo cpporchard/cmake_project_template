@@ -15,7 +15,7 @@ git submodule add https://github.com/google/googletest.git third_party/googletes
 git submodule update --init --recursive
 ```
 
-## Removing Previous Sub Module
+## Removing Previous Sub Module (Optional)
 
 ```shell
 # commit or stash your changes b
