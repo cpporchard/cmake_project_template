@@ -46,3 +46,9 @@ make
 cd build
 ./unittest/VectorTest
 ```
+
+# FAQ
+
+### If Project is not detected as CMake
+Remove the .idea folder and reopen this CMake Project.
+
