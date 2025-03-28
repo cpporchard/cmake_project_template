@@ -8,6 +8,23 @@
 
 # Commands
 
+## Add Library
+
+```shell
+git submodule add https://github.com/google/googletest.git third_party/googletest
+git submodule update --init --recursive
+```
+
+## Removing Previous Sub Module
+
+```shell
+git submodule deinit -f third_party/googletest
+rm -rf third_party/googletest
+git config --file=.gitmodules --remove-section submodule.third_party/googletest
+git config --file=.git/config --remove-section submodule.third_party/googletest
+git rm --cached third_party/googletest
+```
+
 ## Build
 
 ```shell
