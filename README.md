@@ -19,7 +19,9 @@ git submodule update --init --recursive
 
 ```shell
 git submodule deinit -f third_party/googletest
+rm -rf .git/modules/third_party/googletest
 rm -rf third_party/googletest
+
 git config --file=.gitmodules --remove-section submodule.third_party/googletest
 git config --file=.git/config --remove-section submodule.third_party/googletest
 git rm --cached third_party/googletest
