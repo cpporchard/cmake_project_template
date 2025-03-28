@@ -54,7 +54,7 @@ rm -rf build
 ```shell
 mkdir build && cd build
 cmake ..
-make
+make -j$(nproc --all)
 ```
 
 ## Run 

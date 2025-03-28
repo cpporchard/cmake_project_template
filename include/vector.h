@@ -1,26 +1,21 @@
 #pragma once
 
 #include <vector>
+#include <string>
 #include <iostream>
-#include <initializer_list>
 
-template<typename T>
 class Vector {
 public:
     Vector();
-    Vector(std::initializer_list<T> list);
+    Vector(std::initializer_list<float> list);
 
-    Vector<T> operator+(const Vector<T>& other) const;
+    Vector operator+(const Vector& other) const;
     void print() const;
-    T operator[](size_t index) const;
+    float operator[](size_t index) const;
     size_t size() const;
 
-    static std::vector<std::string> split(const std::string& input, const std::string& delimiter);
+    std::vector<std::string> split(const std::string& input, const std::string& delimiter) const;
 
 private:
-    std::vector<T> data;
+    std::vector<float> data;
 };
-
-// Explicit template declarations
-extern template class Vector<float>;
-extern template class Vector<double>;
