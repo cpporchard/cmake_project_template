@@ -2,8 +2,8 @@
 
 1. ~~CMake Simple Project~~ [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/basic)
 2. ~~CMake + Gtest (via Git Submodule)~~ [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/gtest)
-3. CMake + Boost Simple + GTest (via Git Submodule) [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/boost-simple) <-- Most Common
-4. CMake + Boost Http Server (via Git Submodule)
+3. CMake + Boost Simple + GTest (via Git Submodule) [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/boost-simple) <-- Common
+4. CMake + Boost Http Server Executable  (via Git Submodule) <-- Common
 5. CMake + Gtest (via FetchContent)
 
 # Commands
@@ -45,17 +45,28 @@ rm -rf .gitmodules
 
 ## Build
 
+- Remove Previous Build (You won't make use of incremental build)
 ```shell
 rm -rf build
+```
+
+- Build `third_party`, `src` and `test`.
+```shell
 mkdir build && cd build
 cmake ..
 make
 ```
 
 ## Run 
+
+- Run Unit Test
 ```shell
 cd build
 ./unittest/VectorTest
+```
+- Run Executable
+```shell
+TODO
 ```
 
 # FAQ

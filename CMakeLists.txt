@@ -3,8 +3,12 @@ project(VectorPlusPlus)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(include)
-
+add_subdirectory(third_party/boost)
 add_subdirectory(src)
 add_subdirectory(third_party/googletest)
 add_subdirectory(unittest)
+
+include_directories(
+        third_party/boost
+        include
+)

@@ -1,5 +1,6 @@
 #include "../include/vector.h"
 #include <algorithm>
+#include <boost/algorithm/string.hpp>
 
 // Template definitions
 template<typename T>
@@ -34,6 +35,13 @@ T Vector<T>::operator[](size_t index) const {
 template<typename T>
 size_t Vector<T>::size() const {
     return data.size();
+}
+
+template<typename T>
+std::vector<std::string> Vector<T>::split(const std::string& input, const std::string& delimiter) {
+    std::vector<std::string> result;
+    // boost::split(result, input, boost::is_any_of(delimiter));
+    return result;
 }
 
 // Explicit template instantiations

@@ -11,3 +11,13 @@ TEST(VectorFloatTest, BasicAddition) {
     EXPECT_FLOAT_EQ(v3[1], 7.0f);
     EXPECT_FLOAT_EQ(v3[2], 9.0f);
 }
+
+TEST(VectorSplitTest, CommaSeparatedValues) {
+    std::vector<std::string> expected = {"apple", "banana", "grape"};
+    auto result = Vector<int>::split("apple,banana,grape", ",");
+
+    ASSERT_EQ(result.size(), expected.size());
+    for (size_t i = 0; i < expected.size(); ++i) {
+        EXPECT_EQ(result[i], expected[i]);
+    }
+}

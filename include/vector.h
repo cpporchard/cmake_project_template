@@ -15,7 +15,7 @@ public:
     T operator[](size_t index) const;
     size_t size() const;
 
-    // static std::vector<std::string> split(const std::string& input, const std::string& delimiter);
+    static std::vector<std::string> split(const std::string& input, const std::string& delimiter);
 
 private:
     std::vector<T> data;
