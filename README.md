@@ -1,3 +1,19 @@
+<!-- TOC -->
+* [Topics Covered](#topics-covered)
+* [Commands](#commands)
+  * [Add Library](#add-library-)
+    * [Via Git Submodule](#via-git-submodule)
+      * [Adding Google Test and Boost](#adding-google-test-and-boost)
+      * [Removing Previous Sub Module ie Google Test in this case (Optional)](#removing-previous-sub-module-ie-google-test-in-this-case-optional)
+    * [Via CMake FetchContent](#via-cmake-fetchcontent)
+  * [Build](#build)
+  * [Run](#run-)
+    * [Run Unit Test](#run-unit-test)
+    * [Run Executable](#run-executable)
+* [FAQ](#faq)
+    * [If CLion doesn't detect the Project as CMake.](#if-clion-doesnt-detect-the-project-as-cmake)
+<!-- TOC -->
+
 # Topics Covered
 
 1. CMake Simple Project [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/basic)
@@ -11,6 +27,10 @@
 # Commands
 
 ## Add Library 
+
+### Via Git Submodule
+
+#### Adding Google Test and Boost
 
 - Google Test
 ```shell
@@ -28,7 +48,7 @@ git submodule update --init --recursive
 
 ```
 
-## Removing Previous Sub Module (Optional)
+#### Removing Previous Sub Module ie Google Test in this case (Optional)
 
 ```shell
 # commit or stash your changes b
@@ -44,6 +64,7 @@ rm -rf .git/modules/*
 rm -rf third_party
 rm -rf .gitmodules
 ```
+### Via CMake FetchContent
 
 ## Build
 
@@ -61,12 +82,13 @@ make -j$(nproc --all)
 
 ## Run 
 
-- Run Unit Test
+### Run Unit Test
 ```shell
 cd build
 ./unittest/VectorTest
 ```
-- Run Executable
+
+### Run Executable
 ```shell
 
 ./build/src/HttpServer
