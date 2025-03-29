@@ -1,18 +1,29 @@
 # TODO
 
-1. ~~CMake Simple Project~~
-2. ~~CMake + Gtest (via Git Submodule)~~
-3. CMake + Boost Http Server (via Git Submodule)
-4. CMake + Boost + GTest (via Git Submodule) <--- Most common.
-5. CMake + Gtest (via FetContent)
+1. ~~CMake Simple Project~~ [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/basic)
+2. ~~CMake + Gtest (via Git Submodule)~~ [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/gtest)
+3. CMake + Boost Simple + GTest (via Git Submodule) [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/boost-simple) <-- Most Common
+4. CMake + Boost Http Server (via Git Submodule)
+5. CMake + Gtest (via FetchContent)
 
 # Commands
 
-## Add Library
+## Add Library 
 
+- Google Test
 ```shell
 git submodule add https://github.com/google/googletest.git third_party/googletest
 git submodule update --init --recursive
+```
+
+- Boost
+> we noticed that we might need to download whole boost library to include just a subset of boost.
+> We cd into boost and do `--init --recursive` to pull all the submodules inside boost.
+```shell
+git submodule add https://github.com/boostorg/boost.git third_party/boost
+cd third_party/boost
+git submodule update --init --recursive
+
 ```
 
 ## Removing Previous Sub Module (Optional)

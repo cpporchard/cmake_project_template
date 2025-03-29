@@ -1,6 +1,5 @@
 #include "../include/vector.h"
 #include <algorithm>
-#include <stdexcept>
 
 // Template definitions
 template<typename T>
