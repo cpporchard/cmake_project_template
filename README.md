@@ -1,10 +1,12 @@
-# TODO
+# Topics Covered
 
-1. ~~CMake Simple Project~~ [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/basic)
-2. ~~CMake + Gtest (via Git Submodule)~~ [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/gtest)
-3. CMake + Boost Simple + GTest (via Git Submodule) [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/boost-simple) <-- Common
-4. CMake + Boost Http Server Executable  (via Git Submodule) <-- Common
+1. CMake Simple Project [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/basic)
+2. CMake + Gtest (via Git Submodule) [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/gtest)
+3. CMake + Boost Simple + GTest (via Git Submodule) [Link*](https://github.com/cpporchard/cmake_project_template/tree/feature/boost-simple) 
+4. CMake + Boost Http Server Executable  (via Git Submodule) [Link*](https://github.com/cpporchard/cmake_project_template/tree/feature/boost-http-server)
 5. CMake + Gtest (via FetchContent)
+
+> 'Link*' means popular project template.
 
 # Commands
 
@@ -66,11 +68,17 @@ cd build
 ```
 - Run Executable
 ```shell
-TODO
+
+./build/src/HttpServer
+🚀 Starting HTTP server on http://localhost:8080 ...
+
+
+curl "http://localhost:8080/split?text=hi,there,test&delim=,"
+["hi", "there", "test"]
 ```
 
 # FAQ
 
-### If Project is not detected as CMake
-Remove the .idea folder and reopen this CMake Project.
+### If CLion doesn't detect the Project as CMake.
+Remove the .idea folder and reopen the CMake Project.
 
