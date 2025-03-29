@@ -68,7 +68,11 @@ rm -rf .gitmodules
 
 #### If the code already has the Sub Module -- Fetching the library
 
-TODO
+Once you clone the codebase, run this.
+```shell
+git submodule update --init --recursive
+```
+Now, you will have the `third_party/*`. Run the regular build.
 
 ### Via CMake FetchContent
 
