@@ -3,8 +3,9 @@
 * [Commands](#commands)
   * [Add Library](#add-library-)
     * [Via Git Submodule](#via-git-submodule)
-      * [Adding Google Test and Boost](#adding-google-test-and-boost)
-      * [Removing Previous Sub Module ie Google Test in this case (Optional)](#removing-previous-sub-module-ie-google-test-in-this-case-optional)
+      * [Adding New Library - Google Test and Boost](#adding-new-library---google-test-and-boost)
+      * [Removing Previous Sub Module - Google Test in this case (Optional)](#removing-previous-sub-module---google-test-in-this-case-optional)
+      * [If the code already has the Sub Module -- Fetching the library](#if-the-code-already-has-the-sub-module----fetching-the-library)
     * [Via CMake FetchContent](#via-cmake-fetchcontent)
   * [Build](#build)
   * [Run](#run-)
@@ -20,7 +21,7 @@
 2. CMake + Gtest (via Git Submodule) [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/gtest)
 3. CMake + Boost Simple + GTest (via Git Submodule) [Link*](https://github.com/cpporchard/cmake_project_template/tree/feature/boost-simple) 
 4. CMake + Boost Http Server Executable  (via Git Submodule) [Link*](https://github.com/cpporchard/cmake_project_template/tree/feature/boost-http-server)
-5. CMake + Gtest (via FetchContent)
+5. CMake + Gtest (via FetchContent) [Link](https://github.com/cpporchard/cmake_project_template/tree/feature/cmake-FetchContent)
 
 > 'Link*' means popular project template.
 
@@ -30,7 +31,7 @@
 
 ### Via Git Submodule
 
-#### Adding Google Test and Boost
+#### Adding New Library - Google Test and Boost
 
 - Google Test
 ```shell
@@ -48,7 +49,7 @@ git submodule update --init --recursive
 
 ```
 
-#### Removing Previous Sub Module ie Google Test in this case (Optional)
+#### Removing Previous Sub Module - Google Test in this case (Optional)
 
 ```shell
 # commit or stash your changes b
@@ -64,7 +65,14 @@ rm -rf .git/modules/*
 rm -rf third_party
 rm -rf .gitmodules
 ```
+
+#### If the code already has the Sub Module -- Fetching the library
+
+TODO
+
 ### Via CMake FetchContent
+
+Only changes in CMakeList.txt files. Rest all are the same.
 
 ## Build
 
